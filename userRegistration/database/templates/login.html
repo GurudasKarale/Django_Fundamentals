@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  border-radius: 25px;
+  background-color: white;
+  color: white;
+  color:	#808080;
+  display:inline-block;
+  margin-left:170px;
+  border:1px solid #eee;
+  box-shadow:0 2px 2px #ccc;
+  width:900px;
+  padding:10px;
+  text-align: center;
+}
+.button {
+  border-radius: 25px;
+
+  background-color:  #008CBA;
+  color: white;
+  font-size: 16px;
+
+}
+
+.heading {
+  border-radius: 25px;
+  background-color: white;
+  color: white;
+  color:	#808080;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #eee;
+  box-shadow:0 2px 2px #ccc;
+  width:700px;
+  padding:10px;
+  text-align: center;
+}
+
+.frm {
+  border-radius: 25px;
+  background-color: white;
+  color: white;
+  color:	#808080;
+  display:inline-block;
+  margin:10px;
+  border:1px solid #eee;
+  box-shadow:0 2px 2px #ccc;
+  width:700px;
+  padding:10px;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="heading"><h1>Login</h1></div>
+
+<div class="frm">
+    <form action="login" method="post">
+        {% csrf_token %}
+    <label for="txt">Enter Username</label>
+    <input type="text" name="username">
+	<br><br>
+	<label for="password">Enter Password</label>
+    <input type="password" name="password">
+
+
+	<br><br>
+    <input type="submit" class="button" value="Login">
+
+
+    </form>
+    <p>If not registered then click <a href="register">Signup</a></p>
+</div>
+
+</div>
+</body>
+</html>
